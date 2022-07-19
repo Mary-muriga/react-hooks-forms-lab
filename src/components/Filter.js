@@ -1,6 +1,13 @@
 import React from "react";
 
 function Filter({ onCategoryChange }) {
+  function Filter ({search, onSearchChange, onCategoryChange }){
+    function handleSearchChange(event) {
+      onSearchChange(event.target.value);
+      
+    
+    }
+  }
   return (
     <div className="Filter">
       <input type="text" name="search" placeholder="Search..." />
@@ -13,5 +20,6 @@ function Filter({ onCategoryChange }) {
     </div>
   );
 }
+
 
 export default Filter;
